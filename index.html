@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Review Kuliner</title>
+</head>
+<body>
+    <h1>Daftar Review Kuliner</h1>
+    <a href="/add">Tambah Review</a>
+    <ul>
+        {% for r in reviews %}
+        <li>
+            <a href="/detail/{{ r.id }}">
+                {{ r.makanan }} - ⭐{{ r.rating }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
